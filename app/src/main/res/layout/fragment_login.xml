@@ -12,26 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white">
+
         <TextView
             android:id="@+id/hello_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="25dp"
             android:fontFamily="@font/avenir_haevy"
-            android:textColor="#042C5C"
+            android:gravity="center"
             android:text="@string/welcome"
+            android:textColor="#042C5C"
             android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@+id/phone_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.5" />
+            app:layout_constraintGuide_percent="0.45" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/phone_layout"
@@ -104,19 +108,6 @@
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
-            android:id="@+id/forget_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:visibility="invisible"
-            app:layout_constraintTop_toBottomOf="@+id/password_layout"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="20dp"
-            android:textColor="#006983"
-            android:textSize="11sp"
-            android:fontFamily="@font/avenir_haevy"
-            android:text="@string/forget_password"/>
-        <TextView
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,36 +120,7 @@
             android:layout_marginTop="30dp"
             android:textSize="14sp"
             android:fontFamily="@font/avenir_haevy"
-            app:layout_constraintTop_toBottomOf="@+id/forget_password"
+            app:layout_constraintTop_toBottomOf="@+id/password_layout"
             android:background="@drawable/ic_login"/>
-        <TextView
-            android:id="@+id/dont_have"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#77869E"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/sign_up"
-            android:fontFamily="@font/avenir_roman"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            android:layout_marginEnd="1dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@+id/login"
-            android:layout_marginTop="16dp"
-            android:text="@string/don_t_have_a_account"/>
-        <TextView
-            android:id="@+id/sign_up"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#042C5C"
-            android:textSize="14sp"
-            android:fontFamily="@font/avenir_haevy"
-            android:visibility="gone"
-            android:layout_marginStart="1dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/dont_have"
-            app:layout_constraintBaseline_toBaselineOf="@+id/dont_have"
-            android:layout_marginTop="16dp"
-            android:text="@string/sign_up"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

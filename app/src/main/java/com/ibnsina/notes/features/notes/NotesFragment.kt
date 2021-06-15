@@ -32,6 +32,7 @@ class NotesFragment : BaseFragment() {
 
     val adapter = BaseAdapter.initialize(ArrayList<Note>(), R.layout.list_item_note) { view, note ->
         view.findViewById<TextView>(R.id.note_title).text = note.title
+        view.findViewById<TextView>(R.id.note_content).text = note.body
         view.findViewById<TextView>(R.id.note_updated).text = note.updated_at
         view.setOnClickListener {
             val action = NotesFragmentDirections.actionAddNote(note)
