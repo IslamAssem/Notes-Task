@@ -52,6 +52,8 @@ dependencies {
 
     //------Coroutines ------//
     implementation deps.coroutines.core
+    implementation deps.coroutines.android
+    testImplementation deps.coroutines.test
 
 
     //------ Hilt ------//
@@ -73,6 +75,5 @@ dependencies {
     testImplementation  deps.junit
 //    testImplementation deps.mockito.core
     testImplementation "org.mockito.kotlin:mockito-kotlin:3.2.0"
-    testImplementation deps.coroutines.test
     testImplementation deps.arch_core.testing
 }

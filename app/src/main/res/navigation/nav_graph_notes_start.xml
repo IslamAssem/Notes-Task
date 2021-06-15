@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/nav_notes">
+    <fragment
+        android:id="@+id/nav_login"
+        android:label="@string/login"
+        android:name="com.ibnsina.notes.features.login.LoginFragment">
+        <action android:id="@+id/action_login_notes"
+            app:destination="@id/nav_notes"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_login"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notes"
+        android:label="@string/notes"
+        android:name="com.ibnsina.notes.features.notes.NotesFragment">
+        <action android:id="@+id/action_add_note"
+            app:destination="@id/nav_add_note"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add_note"
+        android:label="@string/add_note"
+        android:name="com.ibnsina.notes.features.notes.AddNoteFragment">
+        <action android:id="@+id/action_back"
+            app:popUpTo="@+id/nav_notes"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            />
+        <argument
+            android:name="note"
+            app:nullable="true"
+            app:argType="com.ibnsina.entites.note.Note" />
+    </fragment>
+</navigation>
