@@ -66,4 +66,13 @@ dependencies {
     implementation deps.room.room_ktx
     kapt deps.room.compiler
     implementation deps.room.testing
+
+    testImplementation 'org.robolectric:robolectric:4.4'
+
+    //------ Junit ------//
+    testImplementation  deps.junit
+//    testImplementation deps.mockito.core
+    testImplementation "org.mockito.kotlin:mockito-kotlin:3.2.0"
+    testImplementation deps.coroutines.test
+    testImplementation deps.arch_core.testing
 }
