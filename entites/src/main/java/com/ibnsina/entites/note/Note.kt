@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Entity
 @Parcelize
 data class Note(
-    @PrimaryKey(autoGenerate = true) val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Long,
     val title: String,
     val body: String,
     val updated_at: String,//simulate laravel default fields

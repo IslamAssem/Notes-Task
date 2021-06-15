@@ -41,12 +41,12 @@ class NotesViewModel @Inject constructor(private val notesUseCase: NotesUseCase)
         }
     }
     @SuppressLint("SimpleDateFormat")
-    fun saveNote(id : Int = 0,title:String, body:String){
+    fun saveNote(id : Long = 0,title:String, body:String){
         val dateTime = SimpleDateFormat().format(Date(System.currentTimeMillis()))
         saveNote(Note(id,title,body,dateTime,dateTime))
     }
     @SuppressLint("SimpleDateFormat")
-    fun saveNote(id : Int = 0,title:String, body:String, date:String){
+    fun saveNote(id : Long = 0,title:String, body:String, date:String){
         val dateTime = SimpleDateFormat().format(Date(System.currentTimeMillis()))
         saveNote(Note(id,title,body,dateTime,date))
     }
