@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Notes Task</string>
+    <string name="welcome">Welcome</string>
+    <string name="email">Email</string>
+    <string name="password">Passwprd</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="don_t_have_a_account">I don\'t have account</string>
+    <string name="email_not_exist">Email doesn\'t exist</string>
+    <string name="wrong_credintial">Wrong Credintial</string>
+    <string name="notes">Notes</string>
+    <string name="enter_title">Enter Note Title</string>
+    <string name="add_note">Add new note</string>
+    <string name="write_your_note_here">Write your note here</string>
+    <string name="save">Save</string>
+    <string name="we_need_title">Please enter note title</string>
+</resources>

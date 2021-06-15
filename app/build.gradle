@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+    defaultConfig {
+        applicationId "com.ibnsina.notes"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        debug{
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+//        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.test
+    implementation deps.support.app_compat
+    implementation deps.support.preferences_ktx
+    implementation deps.support.design
+    implementation deps.support.core_v4
+    implementation deps.support.core_utils
+//    implementation deps.support.annotations
+    implementation deps.support.recyclerview
+    implementation deps.support.cardview
+    implementation deps.support.core_ktx
+    implementation deps.support.activity_ktx
+    implementation deps.constraint_layout
+    implementation deps.arch_core.runtime
+    implementation deps.arch_core.runtime
+    //------ Navigation --------//
+    implementation deps.navigation.runtime_ktx
+    implementation deps.navigation.fragment_ktx
+    implementation deps.navigation.ui_ktx
+    implementation deps.squareup.googlegson
+
+    //------ Hilt ------//
+    implementation deps.hilt.android
+    kapt deps.hilt.compiler
+    androidTestImplementation deps.hilt.test
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+    kaptAndroidTest 'androidx.hilt:hilt-compiler:1.0.0'
+
+    //------coroutines ------//
+    implementation deps.coroutines.core
+    testImplementation deps.coroutines.test
+    implementation deps.coroutines.android
+
+    implementation project(path: ':usecases')
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

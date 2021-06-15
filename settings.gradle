@@ -1,0 +1,5 @@
+include ':app'
+include ':usecases'
+include ':entites'
+include ':androidutils'
+rootProject.name = "Notes Task"

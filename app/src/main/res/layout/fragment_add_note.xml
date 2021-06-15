@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="note"
+            type="com.ibnsina.entites.note.Note" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/title_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:theme="@style/NotesTask.text_input"
+            app:hintTextColor="#77869E"
+            android:hint="@string/enter_title"
+            app:placeholderTextColor="#77869E">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/note_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="start|center"
+                android:inputType="text"
+                android:text='@{note != null ? note.title : ""}'
+                tools:text="01093475878"
+                android:lines="1"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:textColor="#042C5C"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <EditText
+            android:id="@+id/note_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/write_your_note_here"
+            android:textColorHint="#CCCCCC"
+            android:gravity="start|top"
+            android:padding="10dp"
+            android:layout_margin="16dp"
+            android:textSize="16sp"
+            android:text='@{note != null ? note.body : ""}'
+            android:textColor="#1A1818"
+            android:inputType="textMultiLine"
+            android:background="@drawable/ic_edit_text_2"
+            android:fontFamily="@font/avenir_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_layout"
+            app:layout_constraintBottom_toTopOf="@+id/save"
+            android:importantForAutofill="no" />
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_margin="16sp"
+            android:textSize="14sp"
+            android:fontFamily="@font/avenir_haevy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/ic_login"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

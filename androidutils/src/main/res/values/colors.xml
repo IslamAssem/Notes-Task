@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DB1414</color>
+    <color name="colorAccent">#DB1414</color>
+    <color name="colorPrimaryDark">#DB1414</color>
+    <color name="accentColor">#DB1414</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white_black">#FFFFFF</color>
+    <color name="black_white">#000000</color>
+    <color name="red">#FF0000</color>
+
+</resources>
